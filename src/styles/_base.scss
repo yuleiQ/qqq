@@ -1,5 +1,8 @@
-input, select, textarea {
-    font-size: 100%;
-    outline: none;
-    border-radius: 0;
+
+
+.container{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
 }

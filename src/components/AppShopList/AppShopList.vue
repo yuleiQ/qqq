@@ -1,7 +1,7 @@
 <template>
   <div class="app-shop-list">
-    <div class="recommend_item-box" v-for="shopList in shopLists" :key="shopList.id" @click="toDetail(shopList.id)">
-				<a>
+    <div class="recommend_item-box" v-for="shopList in shopLists" :key="shopList.id">
+				<a href="##">
 					<div class="item-pic">
 						<img :src="shopList.img">
 					</div>
@@ -37,12 +37,9 @@ export default {
   methods:{
     getShopList(){
         let that = this
-        axios.get('/static/json/mainShop.json').then((res)=>{
+        axios.get('/static/mainShop.json').then((res)=>{
             that.shopLists = res.data
         })
-    },
-    toDetail(id){
-          this.$router.push({name:'detail',params:{id}})
     }
   },
   created(){

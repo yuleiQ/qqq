@@ -2,7 +2,8 @@
   <header class="TopShop-header">
     <div id="headerMenu" class="header-menu">
         <div class="header-icon left-icon">
-           <a class="backBtn fa fa-angle-left" id="_backBtn"></a>  
+           <a class="backBtn fa fa-angle-left" id="_backBtn"></a>
+           
         </div>
         <span class="logo">{{type}}</span>
         <div class="header-icon right-icon">
@@ -22,10 +23,10 @@
 
 export default {
   name: 'TopShopHeader',
-  props:["type"],
+  props:['type'],
   data () {
     return {
-       
+      
     }
   }
 }

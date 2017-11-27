@@ -3,36 +3,35 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 // import ElementUI from 'element-ui'
-// import 'element-ui/lib/theme-chalk/index.css'
 // Vue.use(ElementUI)
-//以上为ElementUI组件库使用方法
+// import 'element-ui/lib/theme-chalk/index.css'
 
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
-Vue.use(MintUI)
-//以上为MintUI组件的使用方法
 
-//icon
+Vue.use(MintUI)
+
+import 'vue-awesome/icons/flag'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 Vue.component('icon',Icon)
 
-//animate.css
-import 'animate.css';
+import 'animate.css'
 
-//swiper
-import 'swiper/dist/css/swiper.min.css';
-import Swiper from 'swiper';
+import 'swiper/dist/css/swiper.min.css'
+ 
+
+Vue.config.productionTip = false
 
 import store from './vuex/store'
-Vue.config.productionTip = false//去掉生产提示
+
 /* eslint-disable no-new */
-new Vue({//根实例
+new Vue({
   el: '#app',
-  router,//在任意组件中都可以通过this.$router/this.$route用到和路由相关的属性和方法
-  store,
-  template: '<App/>',// 根实例的模板变成了根组件，所以这时，根实例ヘ根组件合二为一
+  router,//在任意组件中，通过this.$router this.$route 都可以用到和路由有关的属性和方法
+  store,//在任意组件中，都可以通过this.store来操作store的属性和方法
+  template: '<App/>',
   components: { App }
 })
-

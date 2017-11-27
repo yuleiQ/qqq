@@ -1,30 +1,22 @@
-import Vuex from 'vuex'
-import Vue from 'vue'
+
+import Vue from 'Vue'
+import Vuex from 'Vuex'
+
 Vue.use(Vuex)
-//状态
+
 const state = {
-    //用户信息
     userInfo:{
         username:'',
-        nickname:''
+        password:''
     }
 }
-//mutations
-const mutations = {
-  changeUserInfo(state,userinfo){
-      state.userInfo = userinfo
-  }
-
-}
 
 
-//引入actions
+
 import actions from './actions'
-//创建store  
+
 const store = new Vuex.Store({
-    state,mutations,actions
+    state,actions
 })
-
-
 
 export default store
