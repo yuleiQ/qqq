@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    测试啊啊啊啊啊
     <router-view></router-view>
   </div>
 </template>
@@ -8,7 +9,7 @@
   
 
 export default {
-  name: 'app',
+  name: 'App',
   data(){
     return {
     }
